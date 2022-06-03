@@ -10,11 +10,10 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (newData, index) => {
   const sortDate = [];
-  for (let x = 0; x < newData.length; x++) {
-    const result = (new Date(newData[x]).getTime() / 1000).toString();
+  for (let i = 0; i < newData.length; i++) {
+    const result = (new Date(newData[i]).getTime() / 1000).toString();
     sortDate.push(result);
   }
-
   if (index === undefined) {
     sortDate.sort((a, b) => a - b);
     return sortDate.join(" - ");
